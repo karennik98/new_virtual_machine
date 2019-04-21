@@ -4,13 +4,6 @@ namespace virtual_machine {
 
 	using u_char = unsigned char;
 
-	struct status_regs {
-		bool ZF : 1;
-		bool OF : 1;
-		bool SF : 1;
-		bool CF : 1;
-	};
-
 	constexpr const size_t  STRING_END_BYTE = 0;
 	constexpr const size_t  STRING_HASH_KEY = 5381;
 
@@ -49,5 +42,12 @@ namespace virtual_machine {
 		W  = 2,
 		DW = 4,
 		QW = 8,
+	};
+
+	struct status_regs {
+		bool ZF : 1;
+		bool OF : 1;
+		bool SF : 1;
+		bool CF : 1;
 	};
 }
