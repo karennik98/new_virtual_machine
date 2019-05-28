@@ -30,6 +30,17 @@ public:
 	}
 };
 
+class bad_type :public Exception {
+public:
+	bad_type(std::string file, std::string func, unsigned line) : Exception(file, func, line)
+	{
+	}
+	const char* what() const throw() override
+	{
+		return ("Wrong data type : File: " + m_file = "\nFunction: " + m_func + "\nLine: " + std::to_string(m_line)).c_str();
+	}
+};
+
 class wrong_file_path :public Exception {
 public:
 	wrong_file_path(std::string file, std::string func, unsigned line) : Exception(file, func, line)
@@ -38,6 +49,28 @@ public:
 	const char* what() const throw() override
 	{
 		return ("Wrong function path : File: " + m_file = "\nFunction: " + m_func + "\nLine: " + std::to_string(m_line)).c_str();
+	}
+};
+
+class incomplete_expression :public Exception {
+public:
+	incomplete_expression(std::string file, std::string func, unsigned line) : Exception(file, func, line)
+	{
+	}
+	const char* what() const throw() override
+	{
+		return ("incomplete_expression : File: " + m_file = "\nFunction: " + m_func + "\nLine: " + std::to_string(m_line)).c_str();
+	}
+};
+
+class invalid_data_type :public Exception {
+public:
+	invalid_data_type(std::string file, std::string func, unsigned line) : Exception(file, func, line)
+	{
+	}
+	const char* what() const throw() override
+	{
+		return ("invalid data type or wrong line : File: " + m_file = "\nFunction: " + m_func + "\nLine: " + std::to_string(m_line)).c_str();
 	}
 };
 

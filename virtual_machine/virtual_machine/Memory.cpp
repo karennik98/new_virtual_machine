@@ -3,12 +3,4 @@
 
 namespace virtual_machine {
 
-	Memory::Memory()
-	{
-	}
-
-
-	Memory::~Memory()
-	{
-	}
 }

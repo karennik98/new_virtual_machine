@@ -3,12 +3,4 @@
 
 namespace virtual_machine {
 
-	Commands::Commands()
-	{
-	}
-
-
-	Commands::~Commands()
-	{
-	}
 }

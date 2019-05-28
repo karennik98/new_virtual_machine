@@ -1,0 +1,15 @@
+
+virtual_machine/.vs/virtual_machine/v15/.suo
+*.db
+*.opendb
+*.ipch
+*.sln
+*.obj
+*.idb
+*.pdb
+*.log
+*.pch
+*.tlog
+*.vcxproj
+*.filters
+*.user
